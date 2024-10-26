@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cement Production Workflow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="svg-wrapper" id="svgWrapper">
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Loading workflow diagram...</p>
+            </div>
+            <object id="svgObject" data="src/workflow.svg" type="image/svg+xml" width="1200" height="800">
+                <div class="error-message">
+                    <h3>Unable to load workflow diagram</h3>
+                    <p>Please check your connection and refresh the page. If the problem persists, ensure the SVG file exists and is accessible.</p>
+                    <button onclick="window.location.reload()">Retry</button>
+                </div>
+            </object>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="zoomInBtn" aria-label="Zoom in">+</button>
+        <button id="zoomOutBtn" aria-label="Zoom out">-</button>
+        <button id="resetBtn" aria-label="Reset view">Reset</button>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

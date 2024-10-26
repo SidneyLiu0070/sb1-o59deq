@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for markers and gradients -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="emission-arrow" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4CAF50"/>
+    </marker>
+  </defs>
+
+  <!-- Main Process Flow -->
+  <!-- Material Unloading -->
+  <g transform="translate(100,100)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">Material Unloading</text>
+    <!-- Emission indicator -->
+    <line x1="200" y1="40" x2="250" y2="40" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#emission-arrow)"/>
+    <text x="270" y="35" font-size="12">Dust</text>
+  </g>
+
+  <!-- Loader Feeding -->
+  <g transform="translate(100,220)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">Loader Feeding</text>
+    <line x1="200" y1="40" x2="250" y2="40" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#emission-arrow)"/>
+    <text x="270" y="35" font-size="12">Dust</text>
+  </g>
+
+  <!-- Material Conveying -->
+  <g transform="translate(100,340)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">Material Conveying</text>
+    <line x1="200" y1="40" x2="250" y2="40" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#emission-arrow)"/>
+    <text x="270" y="35" font-size="12">Dust</text>
+  </g>
+
+  <!-- Roller Pressing -->
+  <g transform="translate(400,340)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">Roller Pressing</text>
+    <line x1="200" y1="40" x2="250" y2="40" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#emission-arrow)"/>
+    <text x="270" y="35" font-size="12">Dust + Noise</text>
+  </g>
+
+  <!-- Cement Grinding -->
+  <g transform="translate(700,340)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">Cement Grinding</text>
+    <line x1="200" y1="40" x2="250" y2="40" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#emission-arrow)"/>
+    <text x="270" y="35" font-size="12">Dust + Noise</text>
+  </g>
+
+  <!-- Packaging and Shipping -->
+  <g transform="translate(700,460)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-size="14" font-weight="bold">Packaging and Shipping</text>
+    <line x1="200" y1="40" x2="250" y2="40" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#emission-arrow)"/>
+    <text x="270" y="35" font-size="12">Dust</text>
+  </g>
+
+  <!-- Process Connections -->
+  <g stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M 100,180 L 100,220"/>
+    <path d="M 100,300 L 100,340"/>
+    <path d="M 300,380 L 400,380"/>
+    <path d="M 600,380 L 700,380"/>
+    <path d="M 800,420 L 800,460"/>
+  </g>
+
+  <!-- Environmental Control Systems -->
+  <g transform="translate(900,100)">
+    <rect x="0" y="0" width="200" height="60" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-size="14">Dust Collection System</text>
+  </g>
+
+  <g transform="translate(900,180)">
+    <rect x="0" y="0" width="200" height="60" rx="5" fill="#FFECB3" stroke="#FFA000" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-size="14">Noise Control System</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(100,650)">
+    <text x="0" y="0" font-size="16" font-weight="bold">Legend:</text>
+    <rect x="0" y="20" width="20" height="20" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="30" y="35" font-size="12">Process Step</text>
+    
+    <rect x="150" y="20" width="20" height="20" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+    <text x="180" y="35" font-size="12">Environmental Control</text>
+    
+    <line x1="300" y1="30" x2="340" y2="30" stroke="#4CAF50" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="360" y="35" font-size="12">Emissions</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-size="24" font-weight="bold">Cement Production Process Flow</text>
+</svg>
